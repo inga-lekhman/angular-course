@@ -1,11 +1,46 @@
-<div class="movie-card">
-    <img [src]="movie.backdrop_path" class="movie-image">
-    <div class="movie-details">
-      <h2>{{ movie.title }}</h2>
-      <p>{{ movie.overview }}</p>
-      <p>Рейтинг: {{ movie.rating }}</p>
-      <button (click)="addToFavorites()">Додати до улюблених</button>
-      <button (click)="addToWatchList()">Додати до списку перегляду</button>
-    </div>
-  </div>
-  
+<ng-container *ngIf="isUserLoggedIn">
+  <p>{{userName}}</p>
+</ng-container>
+
+
+<ul *ngFor="let item of items; trackBy: trackById">
+  <li>{{item.name}}</li>
+</ul>
+
+
+<ul class="nav">
+  <li [class.active]="viewMode=='map'">
+    <a (click)="viewMode='map'">Map View</a>
+  </li>
+  <li [class.active]="viewMode=='list'">
+    <a (click)="viewMode='list'">List View</a>
+  </li>
+  <li [class.active]="viewMode=='some'">
+    <a (click)="viewMode='some'">Some View</a>
+  </li>
+</ul>
+
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'map'"> Map View Content</div>
+  <div *ngSwitchCase="'list'">List View Content</div>
+  <div *ngSwitchCase="'some'">Some View Content</div>
+  <div *ngSwitchDefault>Otherwise</div>
+</div>
+
+<p [ngClass]="{'active user-logged-in': isUserLoggedIn, 'unactive': !isUserLoggedIn}"
+  [ngStyle]="{'color': isUserLoggedIn ? 'green': 'red'}">
+  {{userName}}
+</p>
+
+<input type="text" placeholder="Enter text" [appMaxLenght]="5" required>
+
+
+<div *ngIf="!isUserLoggedIn; else contentTemplate">
+  <p>Завантаження...</p>
+</div>
+<ng-template #contentTemplate>
+  <p>Вміст завантажено!</p>
+</ng-template>
+
+
+<p>Число: {{ 12345678433 | numberFormat }}</p>
