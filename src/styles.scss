@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+// @import "@angular/material/prebuilt-themes/indigo-pink.css"
+@import "../node_modules/primeicons/primeicons.css";
+
+p-sidebar {
+    width: 200px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+p {
+    font-size: 10px;
+}

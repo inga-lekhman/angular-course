@@ -1,1 +1,44 @@
-<app-my-component></app-my-component>
+<app-sidebar></app-sidebar>
+<main>
+    <router-outlet></router-outlet>
+
+
+    <div class="fav-watch-page">
+        <router-outlet name="header"></router-outlet>
+    </div>
+</main>
+
+
+
+<!-- template form -->
+
+<!-- <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="name" required>
+    <span *ngIf="errorClass">not valid</span>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" ngModel required email>
+
+    <button type="submit">Submit</button>
+</form> -->
+
+
+
+<!-- reactive form -->
+
+<!-- <form [formGroup]="reactiveForm" (ngSubmit)="onSubmitReactiveForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email">
+
+    <label for="pass">Pass:</label>
+    <input type="text" id="pass" formControlName="password">
+
+    <label for="conf-pass">Confirm Pass:</label>
+    <input type="text" id="conf-pass" formControlName="confirmPass">
+
+    <button type="submit">Submit</button>
+</form> -->

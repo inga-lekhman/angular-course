@@ -1,0 +1,9 @@
+<p-sidebar [(visible)]="visibleSidebar" position="left">
+    <ul>
+        <li><a routerLink="/popular">Popular</a></li>
+        <li><a routerLink="/now-playing">Now Playing</a></li>
+        <li><a routerLink="/top-rate">Top Rate</a></li>
+        <li><a routerLink="/upcoming">Upcoming</a></li>
+    </ul>
+</p-sidebar>
+<button type="button" pButton label="Menu" (click)="visibleSidebar = true">Open Sidebar</button>

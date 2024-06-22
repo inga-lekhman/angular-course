@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MyComponentComponent } from './my-component.component';
+import { WatchLaterPageComponent } from './watch-later-page.component';
 
-describe('MyComponentComponent', () => {
-  let component: MyComponentComponent;
-  let fixture: ComponentFixture<MyComponentComponent>;
+describe('WatchLaterPageComponent', () => {
+  let component: WatchLaterPageComponent;
+  let fixture: ComponentFixture<WatchLaterPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MyComponentComponent]
+      imports: [WatchLaterPageComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(MyComponentComponent);
+    fixture = TestBed.createComponent(WatchLaterPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
