@@ -1,0 +1,17 @@
+@import "../../../../node_modules/primeicons/primeicons.css";
+
+.nav {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    padding: 10px 15px;
+    list-style: none;
+    color: blue;
+
+    &.active {
+        background-color: blue;
+        color: white
+    }
+}
